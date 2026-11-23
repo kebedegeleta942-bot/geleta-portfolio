@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geleta Kebede | Computer Science &amp; Engineering Student and Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Geleta Kebede is a fourth-year Computer Science and Engineering student in Ethiopia building full-stack web applications with React, TypeScript, Node.js and PostgreSQL."
+    />
+    <meta name="author" content="Geleta Kebede" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Geleta Kebede | Full-Stack Developer and CSE Student" />
+    <meta
+      property="og:description"
+      content="Building technology that solves real problems. Projects, skills and contact details."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

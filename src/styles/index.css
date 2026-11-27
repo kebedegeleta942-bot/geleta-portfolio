@@ -280,6 +280,22 @@ dialog.modal {
   margin: auto;
   overflow: hidden;
 }
+dialog.lightbox {
+  background: var(--surface);
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  padding: 0;
+  width: fit-content;
+  min-width: min(22rem, calc(100vw - 1.5rem));
+  max-width: calc(100vw - 1.5rem);
+  max-height: calc(100vh - 2rem);
+  margin: auto;
+  overflow: hidden;
+}
+dialog.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.85);
+}
 dialog.modal::backdrop {
   background: rgba(0, 0, 0, 0.65);
 }

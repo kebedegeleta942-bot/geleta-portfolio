@@ -163,8 +163,8 @@ export function Contact() {
               </Action>
             </div>
             <div className="mt-3">
-              <Action href={links.cv} download={links.cvFileName} variant="ghost" missing="Add your CV PDF in the public folder">
-                <Icon name="file-down" size={16} /> Download My CV
+              <Action href={links.cv} external variant="ghost" missing="Add your resume link in src/data/profile.ts">
+                <Icon name="file-text" size={16} /> View Resume
               </Action>
             </div>
           </Reveal>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
 import { ThemeToggle } from "./ThemeToggle";
+import { resumeViewUrl } from "../data/contact";
 import { profile } from "../data/profile";
 import { useActiveSection } from "../hooks/useActiveSection";
 import type { Theme } from "../hooks/useTheme";
@@ -75,11 +76,12 @@ export function Navbar({ theme, onToggleTheme }: Props) {
 
         <div className="flex items-center gap-2">
           <a
-            href={profile.resumeUrl}
-            download={profile.resumeFileName}
+            href={resumeViewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-ghost hidden sm:inline-flex"
           >
-            <Icon name="download" size={16} /> Resume
+            <Icon name="file-text" size={16} /> View Resume
           </a>
           <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           <button
@@ -111,12 +113,13 @@ export function Navbar({ theme, onToggleTheme }: Props) {
             ))}
             <li className="pt-2">
               <a
-                href={profile.resumeUrl}
-                download={profile.resumeFileName}
+                href={resumeViewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-ghost w-full"
                 onClick={() => setOpen(false)}
               >
-                <Icon name="download" size={16} /> Download resume
+                <Icon name="file-text" size={16} /> View Resume
               </a>
             </li>
           </ul>

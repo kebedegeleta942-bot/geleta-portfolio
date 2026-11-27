@@ -14,7 +14,7 @@ export const profile = {
   email: "kebedegeleta942@gmail.com",
 
   /** Path inside /public. Replace public/Geleta-Kebede-Resume.pdf with your real CV (keep the file name or update this). */
-  resumeUrl: "/Geleta-Kebede-Resume.pdf",
+  resumeUrl: "https://drive.google.com/file/d/16vN7DnELEQldsvCHiPpXKoBFr9OI_07n/view?usp=drive_link",
   resumeFileName: "Geleta-Kebede-Resume.pdf",
 
   /**

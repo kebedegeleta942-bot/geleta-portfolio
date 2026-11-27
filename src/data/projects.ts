@@ -1,3 +1,5 @@
+import { oromiaImages } from "./oromiaImages";
+
 export type ProjectStatus = "deployed" | "concept" | "in-progress";
 
 export const statusLabels: Record<ProjectStatus, string> = {
@@ -7,6 +9,17 @@ export const statusLabels: Record<ProjectStatus, string> = {
 };
 
 export type CoverVariant = "learnsphere" | "city" | "ai";
+
+export interface ProjectImage {
+  src: string;
+  alt: string;
+  caption?: string;
+  /** Groups the gallery: "desktop" (web app) or "mobile" (phone app). Defaults to desktop. */
+  device?: "desktop" | "mobile";
+  /** Pixel size, used to reserve space and avoid layout shift. */
+  width?: number;
+  height?: number;
+}
 
 export interface Project {
   id: string;
@@ -36,7 +49,7 @@ export interface Project {
    * The first image is the card cover; all of them appear in the details view.
    * While this is empty, the abstract cover art is shown instead.
    */
-  images: { src: string; alt: string }[];
+  images: ProjectImage[];
 }
 
 /**
@@ -78,8 +91,7 @@ export const projects: Project[] = [
     live: "https://oromia-learnsphere.pages.dev/",
     api: "https://oromia-learnsphere-api.onrender.com",
     note: "The API runs on a free hosting tier, so the first request after a quiet period can be slow.",
-    // Add screenshots here, e.g. { src: "/projects/oromia-learnsphere/dashboard.webp", alt: "Student dashboard" }
-    images: [],
+    images: oromiaImages,
   },
   {
     id: "ethio-cse-ai",

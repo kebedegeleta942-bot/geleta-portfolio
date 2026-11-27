@@ -60,11 +60,20 @@ export const contactMethods: ContactMethod[] = [
   },
 ];
 
-/** Shortcuts used by the three action buttons. */
+/**
+ * Link used by every "View Resume" button. It opens in a new tab and is never a download.
+ * For a PDF in /public, the viewer hints (#toolbar=0) ask the browser to hide its toolbar.
+ * This is a convenience, not protection: anyone who can view a file can still save it.
+ */
+export const resumeViewUrl =
+  profile.resumeUrl.startsWith("/") && profile.resumeUrl.toLowerCase().endsWith(".pdf")
+    ? `${profile.resumeUrl}#toolbar=0&navpanes=0`
+    : profile.resumeUrl;
+
+/** Shortcuts used by the action buttons. */
 export const links = {
   email: byKey("email").href,
   github: byKey("github").href,
   linkedin: byKey("linkedin").href,
-  cv: profile.resumeUrl,
-  cvFileName: profile.resumeFileName,
+  cv: resumeViewUrl,
 };

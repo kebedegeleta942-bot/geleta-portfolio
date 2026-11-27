@@ -22,7 +22,7 @@ export function ProjectCard({ project, index, onOpen }: Props) {
           boxShadow: `0 0 0 5px color-mix(in srgb, ${c} 6%, transparent), 0 24px 48px -28px rgba(0,0,0,0.55)`,
         }}
       >
-        <div className="aspect-[20/11] overflow-hidden border-b" style={{ borderColor: `color-mix(in srgb, ${c} 30%, var(--line))` }}>
+        <div className="aspect-[2/1] overflow-hidden border-b" style={{ borderColor: `color-mix(in srgb, ${c} 30%, var(--line))` }}>
           <div className="h-full w-full transition-transform duration-500 group-hover:scale-[1.03]">
             {project.images[0] ? (
               <img

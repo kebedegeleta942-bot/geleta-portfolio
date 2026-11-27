@@ -8,7 +8,7 @@ export function CoverArt({ variant }: { variant: CoverVariant }) {
   if (variant === "learnsphere") {
     const rows = ["Grade", "Subject", "Chapter", "Lesson"];
     return (
-      <svg viewBox="0 0 400 220" className="h-full w-full" role="img" aria-label="Learning content hierarchy: grade, subject, chapter, lesson">
+      <svg viewBox="0 0 400 220" className="h-full w-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Learning content hierarchy: grade, subject, chapter, lesson">
         <rect width="400" height="220" fill="var(--surface-2)" />
         {rows.map((label, i) => (
           <g key={label} transform={`translate(${28 + i * 22} ${26 + i * 44})`}>
@@ -26,7 +26,7 @@ export function CoverArt({ variant }: { variant: CoverVariant }) {
 
   if (variant === "ai") {
     return (
-      <svg viewBox="0 0 400 220" className="h-full w-full" role="img" aria-label="A student question and an AI answer in a chat">
+      <svg viewBox="0 0 400 220" className="h-full w-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A student question and an AI answer in a chat">
         <rect width="400" height="220" fill="var(--surface-2)" />
         <rect x="150" y="26" width="222" height="40" rx="12" fill="var(--c-violet)" opacity="0.9" />
         <rect x="168" y="42" width="150" height="7" rx="3.5" fill="var(--bg)" opacity="0.7" />
@@ -45,7 +45,7 @@ export function CoverArt({ variant }: { variant: CoverVariant }) {
   ] as const;
   const edges = [[0, 1], [1, 2], [2, 3], [1, 4], [3, 5], [4, 5], [1, 5]] as const;
   return (
-    <svg viewBox="0 0 400 220" className="h-full w-full" role="img" aria-label="Network of connected city services">
+    <svg viewBox="0 0 400 220" className="h-full w-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Network of connected city services">
       <rect width="400" height="220" fill="var(--surface-2)" />
       {edges.map(([a, b]) => (
         <line key={`${a}-${b}`} x1={nodes[a][0]} y1={nodes[a][1]} x2={nodes[b][0]} y2={nodes[b][1]} stroke="var(--line)" strokeWidth="1.5" />

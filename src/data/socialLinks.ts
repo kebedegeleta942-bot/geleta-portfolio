@@ -20,7 +20,7 @@ export const socialLinks: SocialLink[] = [
     display: profile.email || null,
     placeholder: "your.email@example.com",
   },
-  { key: "github", label: "GitHub", href: null, display: null, placeholder: "github.com/your-username" },
-  { key: "linkedin", label: "LinkedIn", href: null, display: null, placeholder: "linkedin.com/in/your-handle" },
-  { key: "telegram", label: "Telegram", href: null, display: null, placeholder: "t.me/your_username" },
+  { key: "github", label: "GitHub", href:"https://github.com/kebedegeleta942-bot", display: "github.com/kebedegeleta942-bot", placeholder: "github.com/kebedegeleta942-bot" },
+  { key: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/geleta-kebede-65b005352", display: "linkedin.com/geleta-kebede-65b005352", placeholder: "linkedin.com/in/geleta-kebede-65b005352" },
+  { key: "telegram", label: "Telegram", href: "https://t.me/milahn134579912356788", display: "telegram.com/milahn134579912356788", placeholder: "t.me/milahn134579912356788" },
 ];

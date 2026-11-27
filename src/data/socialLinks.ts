@@ -20,8 +20,7 @@ export const socialLinks: SocialLink[] = [
     display: profile.email || null,
     placeholder: "your.email@example.com",
   },
-  { key: "github", label: "GitHub", href: null, display: null, placeholder: "https://github.com/kebedegeleta942-bot" },
-  { key: "github", label: "GitHub", href: null, display: null, placeholder: "" },
+  { key: "github", label: "GitHub", href: null, display: null, placeholder: "github.com/your-username" },
   { key: "linkedin", label: "LinkedIn", href: null, display: null, placeholder: "linkedin.com/in/your-handle" },
   { key: "telegram", label: "Telegram", href: null, display: null, placeholder: "t.me/your_username" },
 ];
